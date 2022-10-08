@@ -14,27 +14,29 @@
 
 
     <script>
-        //Reduce
+       5 //Reduce
         const reducer = (state = [], action) => {
             if (action.type == 'addData') {
                 return action.data
             }
         }
 
-        //State 
+        
+        
+       1 //Store
+        const store = Redux.createStore(reducer)
+        
+       3 //State 
         store.getState()
 
 
-        //Store
-        const store = Redux.createStore(reducer)
-
-        //Action 
+       2 //Action 
         const action = {
             type: 'addData',
             data: 'hicham'
         }
 
-        //Dispatch
+        4 //Dispatch
         store.dispatch(action)
 
 
