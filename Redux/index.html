@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CDN Redux -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"></script>
+
+
+    <script>
+        //Reduce
+        const reducer = (state = [], action) => {
+            if (action.type == 'addData') {
+                return action.data
+            }
+        }
+
+        //State 
+        store.getState()
+
+
+        //Store
+        const store = Redux.createStore(reducer)
+
+        //Action 
+        const action = {
+            type: 'addData',
+            data: 'hicham'
+        }
+
+        //Dispatch
+        store.dispatch(action)
+
+
+        //show in console
+        console.log(store.getState()) //"hicham"
+    </script>
+</body>
+
+</html>
